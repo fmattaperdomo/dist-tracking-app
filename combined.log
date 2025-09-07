@@ -1,0 +1,3 @@
+{"level":"error","message":"error Mongo connection error","service":"MongoDatabase","timestamp":"2025-09-07T23:47:25.931Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T23:48:23.351Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T23:48:23.369Z"}

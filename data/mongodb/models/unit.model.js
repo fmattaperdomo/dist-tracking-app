@@ -45,7 +45,7 @@ const unitSchema = new mongoose_1.Schema({
         maxlength: 100
     },
     currentStatus: {
-        type: [String],
+        type: String,
         required: true,
         default: 'CREATED',
         enum: [

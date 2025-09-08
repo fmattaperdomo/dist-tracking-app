@@ -31,6 +31,7 @@ class RegisterUnit {
                     weight: unit.weight,
                     dimensions: unit.dimensions,
                     currentStatus: unit.currentStatus,
+                    createdAt: unit.createdAt,
                     user: unit.user,
                     shipment: unit.shipment
                 }

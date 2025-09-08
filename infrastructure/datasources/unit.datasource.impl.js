@@ -17,13 +17,14 @@ class UnitDatasourceImpl {
     constructor() { }
     register(registerUnitDto) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { description, weight, dimensions, currentStatus, user, shipment } = registerUnitDto;
+            const { description, weight, dimensions, currentStatus, createdAt, user, shipment } = registerUnitDto;
             try {
                 const unit = yield mongodb_1.UnitModel.create({
                     description,
                     weight,
                     dimensions,
                     currentStatus,
+                    createdAt,
                     user,
                     shipment
                 });

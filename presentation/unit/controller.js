@@ -10,6 +10,8 @@ class UnitController {
         this.logger = (0, logger_plugin_1.buildLogger)(UnitController.name);
         this.handleError = (error, res) => {
             this.logger.error(error);
+            this.logger.error(error.message);
+            this.logger.error(error.stack);
             this.logger.error(res.json);
             if (error instanceof domain_1.CustomError) {
                 return res.status(error.statusCode).json({ error: error.message });
@@ -21,7 +23,7 @@ class UnitController {
             const [error, registerUnitDto] = domain_1.RegisterUnitDto.create(req.body);
             this.logger.log(`Registering unit with data: ${registerUnitDto}`);
             this.logger.error(error);
- 
+  
             if (error)
                 return res.status(400).json({ error });
             new domain_1.RegisterUnit(this.unitRepository)

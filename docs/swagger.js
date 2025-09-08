@@ -135,11 +135,12 @@ const swaggerDefinition = {
     },
   },
 };
+console.log("Current directory:");
+console.log(__dirname);
 
 const options = {
   swaggerDefinition,
-  
-  apis: [`${__dirname}/presentation/routes.js`, `${__dirname}/presentation/auth/routes.js`, `${__dirname}/presentation/shipment/routes.js`, `${__dirname}/presentation/unit/routes.js`, `${__dirname}/presentation/checkpoint/routes.js`],
+  apis: [`${__dirname}/../presentation/routes.js`, `${__dirname}/../presentation/auth/routes.js`, `${__dirname}/../presentation/shipment/routes.js`, `${__dirname}/../presentation/unit/routes.js`, `${__dirname}/../presentation/checkpoint/routes.js`],
 };
 
 const openApiConfiguration = swaggerJsdoc(options);

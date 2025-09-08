@@ -11,27 +11,6 @@ class AuthRoutes {
         const datasource = new infrastructure_1.AuthDatasourceImpl();
         const authRepository = new infrastructure_1.AuthRepositoryImpl(datasource);
         const controller = new controller_1.AuthController(authRepository);
-/**
- * Register a new user
- * @openapi
- * /auth/login:
- *    post:
- *      tags:
- *        - auth
- *      summary: "Register a new user"
- *      description: Log in a new user and get session token
- *      responses:
- *        '200':
- *          description: Return the object inserted into the collection.
- *        '422':
- *          description: Validation error.
- *      parameters:
- *          content:
- *            application/json:
- *              schema:
- *                 $ref: "#/components/schemas/authLogin"
- */
-
         router.post('/login', controller.loginUser);
         /**
          * http://localhost:3001/api
@@ -66,7 +45,10 @@ class AuthRoutes {
          *          tags:
          *              - auth
          *          summary: "Get a user"
+         * 
          *          description: "Route to get a user"
+         *          security:
+         *              - bearerAuth: []
          *          requestBody:
          *              content:
          *                  application/json:

@@ -99,3 +99,11 @@
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:42:41.720Z"}
 {"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:46:19.507Z"}
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:46:19.534Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T16:19:47.596Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T16:19:47.617Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T16:38:19.242Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T16:38:19.265Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T16:43:11.593Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T16:43:11.628Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T17:15:25.637Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T17:15:25.669Z"}

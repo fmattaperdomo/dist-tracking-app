@@ -16,7 +16,7 @@ const swaggerDefinition = {
       url: "http://localhost:3000/api/v1",
     },
     {
-      url: "https://floating-bayou-27076.herokuapp.com/api/v1",
+      url: "https://frozen-bayou-19544-26a909144d90.herokuapp.com/api/v1",
     },
   ],
   components: {

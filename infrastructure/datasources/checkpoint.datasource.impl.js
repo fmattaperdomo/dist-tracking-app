@@ -17,12 +17,13 @@ class CheckpointDatasourceImpl {
     constructor() { }
     register(registerCheckpointDto) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { state, comment, location, user, unit } = registerCheckpointDto;
+            const { state, comment, location, createdAt, user, unit } = registerCheckpointDto;
             try {
                 const checkpoint = yield mongodb_1.CheckpointModel.create({
                     state,
                     comment,
                     location,
+                    createdAt,
                     user,
                     unit
                 });

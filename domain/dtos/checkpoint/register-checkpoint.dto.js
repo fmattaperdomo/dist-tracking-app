@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RegisterCheckpointDto = void 0;
 const config_1 = require("../../../config");
 class RegisterCheckpointDto {
-    constructor(state, comment, location, user, unit) {
+    constructor(state, comment, location, createdAt, user, unit) {
         this.state = state;
         this.comment = comment;
         this.location = location;
@@ -11,7 +11,7 @@ class RegisterCheckpointDto {
         this.unit = unit;
     }
     static create(object) {
-        const { state, comment, location, user, unit } = object;
+        const { state, comment, location, createdAt, user, unit } = object;
         if (!state)
             return ['Missing state'];
         if (!comment)
@@ -22,6 +22,8 @@ class RegisterCheckpointDto {
             return ['Missing location'];
         if (location.length < 6)
             return ['location too short'];
+        if (!createdAt)
+            return ['Missing created At'];
         if (!user)
             return ['Missing user'];
         if (!config_1.Validators.isMongoID(user))
@@ -32,8 +34,8 @@ class RegisterCheckpointDto {
             return ['Invalid Unit ID'];
         return [
             undefined,
-            new RegisterCheckpointDto(state, comment, location, user, unit)
+            new RegisterCheckpointDto(state, comment, location, createdAt, user, unit)
         ];
-    }
+    } 
 }
 exports.RegisterCheckpointDto = RegisterCheckpointDto;

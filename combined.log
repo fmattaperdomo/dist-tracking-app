@@ -78,3 +78,9 @@
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T13:08:44.450Z"}
 {"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T14:00:10.838Z"}
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T14:00:10.858Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T14:10:53.755Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T14:10:53.771Z"}
+{"level":"info","message":"Registering unit with data: [object Object]","service":"UnitController","timestamp":"2025-09-08T14:14:41.768Z"}
+{"level":"error","message":"error","service":"UnitController","timestamp":"2025-09-08T14:14:41.769Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T14:25:15.899Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T14:25:15.918Z"}

@@ -30,6 +30,7 @@ class RegisterCheckpoint {
                     state: checkpoint.state,
                     comment: checkpoint.comment,
                     location: checkpoint.location,
+                    createdAt: checkpoint.createdAt,
                     user: checkpoint.user,
                     unit: checkpoint.unit
                 }

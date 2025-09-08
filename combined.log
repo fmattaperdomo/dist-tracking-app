@@ -107,3 +107,5 @@
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T16:43:11.628Z"}
 {"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T17:15:25.637Z"}
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T17:15:25.669Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T17:27:11.305Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T17:27:11.321Z"}

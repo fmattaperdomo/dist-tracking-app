@@ -17,6 +17,7 @@ const express_1 = __importDefault(require("express"));
 const logger_plugin_1 = require("../presentation/plugins/logger.plugin");
 const swaggerUI = require("swagger-ui-express")
 const openApiConfiguration = require("../docs/swagger")
+const cors = require("cors");
 class Server {
     constructor(options) {
         this.logger = (0, logger_plugin_1.buildLogger)(Server.name);
@@ -27,6 +28,7 @@ class Server {
     }
     start() {
         return __awaiter(this, void 0, void 0, function* () {
+            this.app.use(cors());
             this.app.use(express_1.default.json());
             this.app.use(express_1.default.urlencoded({ extended: true }));
 

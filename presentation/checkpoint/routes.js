@@ -54,7 +54,7 @@ class CheckpointRoutes {
          *             schema:
          *               type: array
          *               items:
-         *                 $ref: '#/components/schemas/storage'
+         *                 $ref: '#/components/schemas/checkpoint'
          *        '400':
          *          description: Validation Error..
          */

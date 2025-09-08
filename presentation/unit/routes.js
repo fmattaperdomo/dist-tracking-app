@@ -12,7 +12,7 @@ class UnitRoutes {
         const unitRepository = new infrastructure_1.UnitRepositoryImpl(datasource);
         const controller = new controller_1.UnitController(unitRepository);
         router.post('/register', controller.registerUnit);
-        router.get('/', [unit_middleware_1.UnitMiddleware.validateJWT], controller.getUnits);
+        router.get('/', controller.getUnits);
         return router;
     }
 }

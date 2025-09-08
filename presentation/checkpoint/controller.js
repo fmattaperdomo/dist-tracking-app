@@ -27,8 +27,8 @@ class CheckpointController {
         this.getCheckpoints = (req, res) => {
             mongodb_1.CheckpointModel.find()
                 .then(checkpoints => {
-                res.json({
-                    checkpoint: req.body.checkpoint
+                res.status(200).json({
+                    checkpoints
                 });
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));

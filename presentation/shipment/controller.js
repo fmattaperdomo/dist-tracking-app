@@ -21,14 +21,14 @@ class ShipmentController {
                 return res.status(400).json({ error });
             new domain_1.RegisterShipment(this.shipmentRepository)
                 .execute(registerShipmentDto)
-                .then(data => res.json(data))
+                .then(data => res.status(200).json(data))
                 .catch(error => this.handleError(error, res));
         };
         this.getShipments = (req, res) => {
             mongodb_1.ShipmentModel.find()
                 .then(shipments => {
-                res.json({
-                    shipment: req.body.shipment
+                res.status(200).json({
+                    shipments 
                 });
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));

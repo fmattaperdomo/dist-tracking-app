@@ -19,20 +19,21 @@ class UnitController {
         };
         this.registerUnit = (req, res) => {
             const [error, registerUnitDto] = domain_1.RegisterUnitDto.create(req.body);
-            if (error)
-                return res.status(400).json({ error });
             this.logger.log(`Registering unit with data: ${registerUnitDto}`);
             this.logger.error(error);
+ 
+            if (error)
+                return res.status(400).json({ error });
             new domain_1.RegisterUnit(this.unitRepository)
                 .execute(registerUnitDto)
-                .then(data => res.json(data))
+                .then(data => res.status(200).json(data))
                 .catch(error => this.handleError(error, res));
         };
         this.getUnits = (req, res) => {
             mongodb_1.UnitModel.find()
                 .then(units => {
-                res.json({
-                    unit: req.body.unit
+                res.status(200).json({
+                    units
                 });
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));

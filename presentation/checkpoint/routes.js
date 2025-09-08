@@ -12,7 +12,7 @@ class CheckpointRoutes {
         const checkpointRepository = new infrastructure_1.CheckpointRepositoryImpl(datasource);
         const controller = new controller_1.CheckpointController(checkpointRepository);
         router.post('/register', controller.registerCheckpoint);
-        router.get('/', [checkpoint_middleware_1.CheckpointMiddleware.validateJWT], controller.getCheckpoints);
+        router.get('/', controller.getCheckpoints);
         return router;
     }
 }

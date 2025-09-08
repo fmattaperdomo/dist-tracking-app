@@ -12,7 +12,7 @@ class ShipmentRoutes {
         const shipmentRepository = new infrastructure_1.ShipmentRepositoryImpl(datasource);
         const controller = new controller_1.ShipmentController(shipmentRepository);
         router.post('/register', controller.registerShipment);
-        router.get('/', [shipment_middleware_1.ShipmentMiddleware.validateJWT], controller.getShipments);
+        router.get('/', controller.getShipments);
         return router;
     }
 }

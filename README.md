@@ -17,4 +17,9 @@ docker-compose up -d
 node app
 ```
 
+5. Ejecutar Endpoints Swagger
+```bash
+http://localhost:3000/documentation/
+```
+
 

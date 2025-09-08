@@ -15,6 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Server = void 0;
 const express_1 = __importDefault(require("express"));
 const logger_plugin_1 = require("../presentation/plugins/logger.plugin");
+const swaggerUI = require("swagger-ui-express")
+const openApiConfiguration = require("../docs/swagger")
 class Server {
     constructor(options) {
         this.logger = (0, logger_plugin_1.buildLogger)(Server.name);
@@ -27,6 +29,12 @@ class Server {
         return __awaiter(this, void 0, void 0, function* () {
             this.app.use(express_1.default.json());
             this.app.use(express_1.default.urlencoded({ extended: true }));
+
+            this.app.use('/documentation',
+            swaggerUI.serve, 
+            swaggerUI.setup(openApiConfiguration))
+
+
             this.app.use(this.routes);
             this.app.listen(this.port, () => {
                 this.logger.log(`Server running on port ${this.port}`);

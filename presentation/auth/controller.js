@@ -21,7 +21,7 @@ class AuthController {
                 return res.status(400).json({ error });
             new domain_1.RegisterUser(this.authRepository)
                 .execute(registerUserDto)
-                .then(data => res.json(data))
+                .then(data => res.status(200).json(data))
                 .catch(error => this.handleError(error, res));
         };
         this.loginUser = (req, res) => {
@@ -30,14 +30,14 @@ class AuthController {
                 return res.status(400).json({ error });
             new domain_1.LoginUser(this.authRepository)
                 .execute(loginUserDto)
-                .then(data => res.json(data))
+                .then(data => res.status(200).json(data))
                 .catch(error => this.handleError(error, res));
         };
         this.getUsers = (req, res) => {
             mongodb_1.UserModel.find()
                 .then(users => {
-                res.json({
-                    user: req.body.user
+                res.status(200).json({
+                    users
                 });
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));

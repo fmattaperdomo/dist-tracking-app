@@ -42,6 +42,15 @@ class AuthController {
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));
         };
+        this.getUsersId = (req, res) => {
+            mongodb_1.UserModel.findById(req.params.id)
+                .then(users => {
+                res.status(200).json({
+                    users
+                });
+            })
+                .catch(() => res.status(500).json({ error: 'Internal server error' }));
+        };
     }
 }
 exports.AuthController = AuthController;

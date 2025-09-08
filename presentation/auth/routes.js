@@ -79,6 +79,7 @@ class AuthRoutes {
          *                      description: Internal error
          */
         router.get('/',[auth_middleware_1.AuthMiddleware.validateJWT], controller.getUsers);
+        router.get('/:id',controller.getUsersId);
         return router;
     }
 }

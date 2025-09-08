@@ -13,6 +13,7 @@ class UnitRoutes {
         const controller = new controller_1.UnitController(unitRepository);
         router.post('/register', controller.registerUnit);
         router.get('/', controller.getUnits);
+        router.get('/:id',controller.getUnitsId);
         return router;
     }
 }

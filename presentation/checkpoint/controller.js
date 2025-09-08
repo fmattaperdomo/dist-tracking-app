@@ -33,6 +33,24 @@ class CheckpointController {
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));
         };
+        this.getCheckpointsId = (req, res) => {
+            mongodb_1.CheckpointModel.findById(req.params.id)
+                .then(checkpoints => {
+                res.status(200).json({
+                    checkpoints
+                });
+            })
+                .catch(() => res.status(500).json({ error: 'Internal server error' }));
+        };
+        this.getCheckpointsUnit = (req, res) => {
+            mongodb_1.CheckpointModel.find({unit: req.params.id})
+                .then(checkpoints => {
+                res.status(200).json({
+                    checkpoints
+                });
+            })
+                .catch(() => res.status(500).json({ error: 'Internal server error' }));
+        };
     }
 }
 exports.CheckpointController = CheckpointController;

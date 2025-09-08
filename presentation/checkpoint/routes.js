@@ -13,6 +13,8 @@ class CheckpointRoutes {
         const controller = new controller_1.CheckpointController(checkpointRepository);
         router.post('/register', controller.registerCheckpoint);
         router.get('/', controller.getCheckpoints);
+        router.get('/:id',controller.getCheckpointsId);
+        router.get('/unit/:id',controller.getCheckpointsUnit);
         return router;
     }
 }

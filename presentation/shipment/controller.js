@@ -33,6 +33,16 @@ class ShipmentController {
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));
         };
+        this.getShipmentsId = (req, res) => {
+            mongodb_1.ShipmentModel.findById(req.params.id)
+                .then(shipments => {
+                res.status(200).json({
+                    shipments 
+                });
+            })
+                .catch(() => res.status(500).json({ error: 'Internal server error' }));
+        };
+
     }
 }
 exports.ShipmentController = ShipmentController;

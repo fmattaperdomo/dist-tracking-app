@@ -13,6 +13,7 @@ class ShipmentRoutes {
         const controller = new controller_1.ShipmentController(shipmentRepository);
         router.post('/register', controller.registerShipment);
         router.get('/', controller.getShipments);
+        router.get('/:id',controller.getShipmentsId);
         return router;
     }
 }

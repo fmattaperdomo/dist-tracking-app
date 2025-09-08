@@ -84,3 +84,18 @@
 {"level":"error","message":"error","service":"UnitController","timestamp":"2025-09-08T14:14:41.769Z"}
 {"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T14:25:15.899Z"}
 {"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T14:25:15.918Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:04:23.704Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:04:23.723Z"}
+{"level":"info","message":"Registering unit with data: [object Object]","service":"UnitController","timestamp":"2025-09-08T15:04:28.419Z"}
+{"level":"error","message":"error","service":"UnitController","timestamp":"2025-09-08T15:04:28.420Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:18:54.394Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:18:54.413Z"}
+{"level":"error","message":"error Error: User already exists","service":"AuthDatasourceImpl","timestamp":"2025-09-08T15:19:20.863Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:23:27.141Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:23:27.188Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:32:49.251Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:32:49.284Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:42:41.695Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:42:41.720Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-08T15:46:19.507Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-08T15:46:19.534Z"}

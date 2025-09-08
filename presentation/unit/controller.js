@@ -40,6 +40,16 @@ class UnitController {
             })
                 .catch(() => res.status(500).json({ error: 'Internal server error' }));
         };
+        this.getUnitsId = (req, res) => {
+            mongodb_1.UnitModel.findById(req.params.id)
+                .then(units => {
+                res.status(200).json({
+                    units
+                });
+            })
+                .catch(() => res.status(500).json({ error: 'Internal server error' }));
+        };
+
     }
 }
 exports.UnitController = UnitController;
